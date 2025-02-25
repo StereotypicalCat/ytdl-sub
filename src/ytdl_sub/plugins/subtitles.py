@@ -97,7 +97,7 @@ class SubtitleOptions(ToggleableOptionsDictValidator):
         """
         :expected type: Optional[String]
         :description:
-          Defaults to "srt". One of the subtitle file types "srt", "vtt", "ass", "lrc".
+          Defaults to "srt". One of the subtitle file types "srt", "vtt", "srv3, "ass", "lrc".
         """
         return self._subtitles_type
 
