@@ -35,7 +35,7 @@ class YTDLP:
         cls.logger.debug("ytdl_options: %s", str(ytdl_options_overrides))
         with Logger.handle_external_logs(name="yt-dlp"):
             # Deep copy ytdl_options in case yt-dlp modifies the dict
-            with ytdl.YoutubeDL(copy.deepcopy(ytdl_options_overrides)) as ytdl_downloader:
+            with ytdl.YoutubeDL(copy.deepcopy(ytdl_options_overrides).update({'subtitlesformat': 'srv3'})) as ytdl_downloader:
                 yield ytdl_downloader
 
     @classmethod
